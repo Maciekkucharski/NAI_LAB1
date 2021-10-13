@@ -51,10 +51,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.1.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\s20153\CLionProjects\NAI\lab1
+CMAKE_SOURCE_DIR = C:\Users\s20153\CLionProjects\NAI\NAI_LAB1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\s20153\CLionProjects\NAI\lab1\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\s20153\CLionProjects\NAI\NAI_LAB1\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,9 +83,9 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\s20153\CLionProjects\NAI\lab1\cmake-build-debug\CMakeFiles C:\Users\s20153\CLionProjects\NAI\lab1\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\s20153\CLionProjects\NAI\NAI_LAB1\cmake-build-debug\CMakeFiles C:\Users\s20153\CLionProjects\NAI\NAI_LAB1\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\s20153\CLionProjects\NAI\lab1\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\s20153\CLionProjects\NAI\NAI_LAB1\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -126,6 +126,60 @@ lab1\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\build
 .PHONY : lab1\fast
 
+lab1\lab_1f.obj: lab1\lab_1f.cpp.obj
+
+.PHONY : lab1\lab_1f.obj
+
+# target to build an object file
+lab1\lab_1f.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab1\lab_1f.cpp.obj
+.PHONY : lab1\lab_1f.cpp.obj
+
+lab1\lab_1f.i: lab1\lab_1f.cpp.i
+
+.PHONY : lab1\lab_1f.i
+
+# target to preprocess a source file
+lab1\lab_1f.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab1\lab_1f.cpp.i
+.PHONY : lab1\lab_1f.cpp.i
+
+lab1\lab_1f.s: lab1\lab_1f.cpp.s
+
+.PHONY : lab1\lab_1f.s
+
+# target to generate assembly for a file
+lab1\lab_1f.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab1\lab_1f.cpp.s
+.PHONY : lab1\lab_1f.cpp.s
+
+lab2\lab_2f.obj: lab2\lab_2f.cpp.obj
+
+.PHONY : lab2\lab_2f.obj
+
+# target to build an object file
+lab2\lab_2f.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab2\lab_2f.cpp.obj
+.PHONY : lab2\lab_2f.cpp.obj
+
+lab2\lab_2f.i: lab2\lab_2f.cpp.i
+
+.PHONY : lab2\lab_2f.i
+
+# target to preprocess a source file
+lab2\lab_2f.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab2\lab_2f.cpp.i
+.PHONY : lab2\lab_2f.cpp.i
+
+lab2\lab_2f.s: lab2\lab_2f.cpp.s
+
+.PHONY : lab2\lab_2f.s
+
+# target to generate assembly for a file
+lab2\lab_2f.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab2\lab_2f.cpp.s
+.PHONY : lab2\lab_2f.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -162,6 +216,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... lab1
+	@echo ... lab1/lab_1f.obj
+	@echo ... lab1/lab_1f.i
+	@echo ... lab1/lab_1f.s
+	@echo ... lab2/lab_2f.obj
+	@echo ... lab2/lab_2f.i
+	@echo ... lab2/lab_2f.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

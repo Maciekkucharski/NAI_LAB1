@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="lab1"/>
+		<Option title="NAI_LAB1"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="msvc8"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -85,15 +85,6 @@
 			</Target>
 		</Build>
 		<Unit filename="C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab1/lab_1f.cpp">
-			<Option target="lab1"/>
-		</Unit>
-		<Unit filename="C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab1/lab_1f.hpp">
-			<Option target="lab1"/>
-		</Unit>
-		<Unit filename="C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab2/lab_2f.cpp">
-			<Option target="lab1"/>
-		</Unit>
-		<Unit filename="C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab2/lab_2f.hpp">
 			<Option target="lab1"/>
 		</Unit>
 		<Unit filename="C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/main.cpp">

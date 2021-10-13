@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/s20153/CLionProjects/NAI/lab1/main.cpp" "C:/Users/s20153/CLionProjects/NAI/lab1/cmake-build-debug/CMakeFiles/lab1.dir/main.cpp.obj"
+  "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab1/lab_1f.cpp" "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/cmake-build-debug/CMakeFiles/lab1.dir/lab1/lab_1f.cpp.obj"
+  "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab2/lab_2f.cpp" "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/cmake-build-debug/CMakeFiles/lab1.dir/lab2/lab_2f.cpp.obj"
+  "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/main.cpp" "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/cmake-build-debug/CMakeFiles/lab1.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 
