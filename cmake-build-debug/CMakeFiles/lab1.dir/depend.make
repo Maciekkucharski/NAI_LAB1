@@ -4,9 +4,7 @@
 CMakeFiles\lab1.dir\lab1\lab_1f.cpp.obj: ..\lab1\lab_1f.cpp
 
 CMakeFiles\lab1.dir\lab2\lab_2f.cpp.obj: ..\lab2\lab_2f.cpp
-CMakeFiles\lab1.dir\lab2\lab_2f.cpp.obj: ..\lab2\lab_2f.hpp
 
-CMakeFiles\lab1.dir\main.cpp.obj: ..\lab1\lab_1f.hpp
 CMakeFiles\lab1.dir\main.cpp.obj: ..\lab2\lab_2f.hpp
 CMakeFiles\lab1.dir\main.cpp.obj: ..\main.cpp
 

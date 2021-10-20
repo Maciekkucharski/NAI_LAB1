@@ -96,6 +96,12 @@
 		<Unit filename="C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab2/lab_2f.hpp">
 			<Option target="lab1"/>
 		</Unit>
+		<Unit filename="C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab3/lab_3.cpp">
+			<Option target="lab1"/>
+		</Unit>
+		<Unit filename="C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab3/lab_3.h">
+			<Option target="lab1"/>
+		</Unit>
 		<Unit filename="C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/main.cpp">
 			<Option target="lab1"/>
 		</Unit>

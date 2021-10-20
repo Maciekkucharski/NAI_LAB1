@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab1/lab_1f.cpp" "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/cmake-build-debug/CMakeFiles/lab1.dir/lab1/lab_1f.cpp.obj"
   "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab2/lab_2f.cpp" "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/cmake-build-debug/CMakeFiles/lab1.dir/lab2/lab_2f.cpp.obj"
+  "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab3/lab_3.cpp" "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/cmake-build-debug/CMakeFiles/lab1.dir/lab3/lab_3.cpp.obj"
   "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/main.cpp" "C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/cmake-build-debug/CMakeFiles/lab1.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")

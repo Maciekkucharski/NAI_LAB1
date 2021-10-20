@@ -180,6 +180,33 @@ lab2\lab_2f.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab2\lab_2f.cpp.s
 .PHONY : lab2\lab_2f.cpp.s
 
+lab3\lab_3.obj: lab3\lab_3.cpp.obj
+
+.PHONY : lab3\lab_3.obj
+
+# target to build an object file
+lab3\lab_3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab3\lab_3.cpp.obj
+.PHONY : lab3\lab_3.cpp.obj
+
+lab3\lab_3.i: lab3\lab_3.cpp.i
+
+.PHONY : lab3\lab_3.i
+
+# target to preprocess a source file
+lab3\lab_3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab3\lab_3.cpp.i
+.PHONY : lab3\lab_3.cpp.i
+
+lab3\lab_3.s: lab3\lab_3.cpp.s
+
+.PHONY : lab3\lab_3.s
+
+# target to generate assembly for a file
+lab3\lab_3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab3\lab_3.cpp.s
+.PHONY : lab3\lab_3.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -222,6 +249,9 @@ help:
 	@echo ... lab2/lab_2f.obj
 	@echo ... lab2/lab_2f.i
 	@echo ... lab2/lab_2f.s
+	@echo ... lab3/lab_3.obj
+	@echo ... lab3/lab_3.i
+	@echo ... lab3/lab_3.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

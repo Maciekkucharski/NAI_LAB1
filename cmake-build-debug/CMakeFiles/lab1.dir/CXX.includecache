@@ -6,25 +6,19 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab1/lab_1f.cpp
+C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab2/lab_2f.cpp
+functional
+-
+iomanip
+-
 iostream
+-
+list
+-
+random
 -
 vector
 -
-
-C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab1/lab_1f.hpp
-
-C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab2/lab_2f.cpp
-lab_2f.hpp
-C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab2/lab_2f.hpp
-
-C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab2/lab_2f.hpp
-
-C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/main.cpp
-lab1/lab_1f.hpp
-C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab1/lab_1f.hpp
-lab2/lab_2f.hpp
-C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab2/lab_2f.hpp
-iostream
+math.h
 -
 
