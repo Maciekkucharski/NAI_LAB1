@@ -5,44 +5,77 @@
 #include <random>
 #include <vector>
 #include <math.h>
+#include <algorithm>
 #include "lab2/lab_2f.hpp"
 #define PI 3.14159265
 
 
 using namespace std;
 
+random_device rd;
+mt19937 mt_generator(rd());
 
-int main(){
-//    random_device rd;
-//    mt19937 gen(rd());
-//    int input = 0;
-//    cout<<" 1: himmelblau, 2:Levy"<<endl;
-//    cin>>input;
-//    double bottom, top;
-//    cout<<"Bottom Range:"<<endl;
-//    cin>>bottom;
-//    cout<<"Top Range:"<<endl;
-//    cin>>top;
-//    uniform_real_distribution<double> shift = uniform_real_distribution<double> (bottom, top);
-//    int iterations;
-//    cout<<"Iterations:"<<endl;
-//    cin>> iterations;
-//    if(input==1){
-//        uniform_real_distribution<> random(-5, 5);
-//        vector<double> p0 = {
-//                random(gen),
-//                random(gen),
-//        };
-//        auto point = hill_climbing(himmelblau_function, himmelblau_domain, p0, iterations, shift);
-//        cout <<"f("<< point << ")=" << himmelblau_function(point) << endl;
-//    }else{
-//        uniform_real_distribution<> random(-10, 10);
-//        vector<double> p0 = {
-//                random(gen),
-//                random(gen),
-//        };
-//        auto point = hill_climbing(levy_function, levy_domain, p0, iterations, shift);
-//        cout <<"f("<< point <<") = " << levy_function(point) << endl;
-//    }
 
+int main() {
+    int input = 0;
+    cout << " 1: himmelblau, 2:Levy" << endl;
+    cin >> input;
+    double bottom, top;
+    cout << "Bottom Range:" << endl;
+    cin >> bottom;
+    cout << "Top Range:" << endl;
+    cin >> top;
+    uniform_real_distribution<double> shift = uniform_real_distribution<double>(bottom, top);
+    int iterations;
+    cout << "Iterations:" << endl;
+    cin >> iterations;
+    if (input == 1) {
+        uniform_real_distribution<> random(-5, 5);
+        vector<double> p0 = {
+                random(mt_generator),
+                random(mt_generator),
+        };
+        auto result = simulated_annealing(
+                himmelblau_function, himmelblau_domain, p0, iterations,[](int k) { return 1000.0 / k; }, shift
+        );
+        cout << "f(" << result << ") = " << himmelblau_function(result) << endl;
+    } else {
+        uniform_real_distribution<> random(-10, 10);
+        vector<double> p0 = {
+                random(mt_generator),
+                random(mt_generator),
+        };
+        auto result = simulated_annealing(
+                himmelblau_function, himmelblau_domain, p0, iterations,[](int k) { return 1000.0 / k; }, shift
+        );
+        cout << "f(" << result << ") = " << himmelblau_function(result) << endl;
+    }
+
+    if (input == 1) {
+        uniform_real_distribution<> random(-5, 5);
+        vector<double> p0 = {
+                random(mt_generator),
+                random(mt_generator),
+        };
+        auto point = hill_climbing(himmelblau_function, himmelblau_domain, p0, iterations, shift);
+        cout << "f(" << point << ") = " << himmelblau_function(point) << endl;
+    } else {
+        uniform_real_distribution<> random(-10, 10);
+        vector<double> p0 = {
+                random(mt_generator),
+                random(mt_generator),
+        };
+        auto point = hill_climbing(levy_function, levy_domain, p0, iterations, shift);
+        cout << "f(" << point << ") = " << levy_function(point) << endl;
+    }
 }
+
+
+
+
+
+
+
+
+
+

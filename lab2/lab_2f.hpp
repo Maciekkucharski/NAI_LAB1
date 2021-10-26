@@ -24,4 +24,12 @@ auto levy_function = [](std::vector<double> v) {
 auto levy_domain = [](std::vector<double> v) {
     return (abs(v[0]) <= 10) && (abs(v[1]) <= 10);
 };
+
+std::vector<double> simulated_annealing(
+        std::function<double(std::vector<double>)> f,
+        std::function<bool(std::vector<double>)> f_domain,
+        std::vector<double> p0,
+        int iterations,
+        std::function<double(int)> T,
+        std::uniform_real_distribution<double> shift);
 #endif //LAB1_LAB_2F_HPP

@@ -42,3 +42,43 @@ std::vector<double> hill_climbing(std::function<double(std::vector<double>)> f, 
     return p;
 }
 
+std::vector<double> simulated_annealing(
+        std::function<double(std::vector<double>)> f,
+        std::function<bool(std::vector<double>)> f_domain,
+        std::vector<double> p0,
+        int iterations,
+        std::function<double(int)> T,
+        std::uniform_real_distribution<double> shift)
+{
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    auto p = p0;
+    auto s_global_best = p0;
+
+    std::uniform_real_distribution<> u_k(0.0, 1.0);
+    std::uniform_int_distribution<> distrib(0, p.size()-1);
+    if (!f_domain(p)) throw std::invalid_argument("The p0 point must be in domain");
+
+    for (int k = 0; k < iterations; k++) {
+        auto p2 = p;
+        do{
+            p2[distrib(gen)] += shift(gen);
+        }while(f_domain(p2));
+        double y2 = f(p2);
+        if (y2 < f(p)) {
+            p = p2;
+
+        } else {
+            double u = u_k(gen);
+            if (u < exp(-abs(f(p2) - f(p)) / T(k))) {
+                p = p2;
+            } else {
+            }
+        }
+        if (f(p) < f(s_global_best)) {
+            s_global_best = p;
+        }
+    }
+    return s_global_best;
+}
+
