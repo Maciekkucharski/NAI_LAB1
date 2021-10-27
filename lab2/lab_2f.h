@@ -1,9 +1,11 @@
 //
-// Created by s20153 on 13.10.2021.
+// Created by s20153 on 27.10.2021.
 //
 
-#ifndef LAB1_LAB_2F_HPP
-#define LAB1_LAB_2F_HPP
+#ifndef NAI_NR2_LAB2_H
+#define NAI_NR2_LAB2_H
+
+
 #define PI 3.14159265
 
 std::ostream& operator<<(std::ostream& o, std::vector<double> v);
@@ -14,7 +16,7 @@ auto himmelblau_function = [](std::vector<double> v) {
 };
 
 auto himmelblau_domain = [](std::vector<double> v) {
-    return (abs(v[0]) <= 5) && (abs(v[1]) <= 5);
+    return (std::abs(v[0]) <= 5) && (std::abs(v[1]) <= 5);
 };
 
 auto levy_function = [](std::vector<double> v) {
@@ -22,7 +24,7 @@ auto levy_function = [](std::vector<double> v) {
 };
 
 auto levy_domain = [](std::vector<double> v) {
-    return (abs(v[0]) <= 10) && (abs(v[1]) <= 10);
+    return (std::abs(v[0]) <= 10) && (std::abs(v[1]) <= 10);
 };
 
 std::vector<double> simulated_annealing(
@@ -31,5 +33,6 @@ std::vector<double> simulated_annealing(
         std::vector<double> p0,
         int iterations,
         std::function<double(int)> T,
-        std::uniform_real_distribution<double> shift);
-#endif //LAB1_LAB_2F_HPP
+        std::uniform_real_distribution<double> hop_range);
+
+#endif //NAI_NR2_LAB2_H
