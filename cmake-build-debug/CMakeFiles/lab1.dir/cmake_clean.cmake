@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lab1.dir/lab1/lab_1f.cpp.obj"
-  "CMakeFiles/lab1.dir/lab2/lab_2f.cpp.obj"
-  "CMakeFiles/lab1.dir/lab3/lab_3.cpp.obj"
+  "CMakeFiles/lab1.dir/lab2/lab_2.cpp.obj"
   "CMakeFiles/lab1.dir/main.cpp.obj"
   "lab1.exe"
   "lab1.exe.manifest"

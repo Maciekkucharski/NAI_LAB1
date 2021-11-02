@@ -6,10 +6,10 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/s20153/CLionProjects/NAI/NAI_LAB1/lab2/lab_2f.cpp
+E:/Uczelnia/NAI/NAI_LAB1/lab2/lab_2.hpp
+
+E:/Uczelnia/NAI/NAI_LAB1/main.cpp
 functional
--
-iomanip
 -
 iostream
 -
@@ -19,6 +19,8 @@ random
 -
 vector
 -
-math.h
+lab2/lab_2.hpp
+E:/Uczelnia/NAI/NAI_LAB1/lab2/lab_2.hpp
+chrono
 -
 

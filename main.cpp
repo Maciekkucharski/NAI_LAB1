@@ -3,7 +3,7 @@
 #include <list>
 #include <random>
 #include <vector>
-#include "lab_2/lab2.h"
+#include "lab2/lab_2.hpp"
 #include <chrono>
 #define PI 3.14159265
 
@@ -36,21 +36,13 @@ int main() {
                 random(mt_generator),
         };
         cout << p0[0]<< "|" << p0[1] <<endl;
-//        auto begin = std::chrono::high_resolution_clock::now();
+
         auto result = simulated_annealing(himmelblau_function, himmelblau_domain, p0, iterations, [](int k) { return 1000.0 / k; }, hop_range);
         cout << "f(" << result << ") = " << himmelblau_function(result) << endl;
-//        auto end = std::chrono::high_resolution_clock::now();
-//        auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
 
-//        printf("Time measured: %.3f seconds.\n", elapsed.count() * 1e-9);
-
-//        auto begin2 = std::chrono::high_resolution_clock::now();
         auto point = hill_climbing(himmelblau_function, himmelblau_domain, p0, iterations, hop_range);
         cout << "f(" << point << ") = " << himmelblau_function(point) << endl;
-//        auto end2 = std::chrono::high_resolution_clock::now();
-//        auto elapsed2 = std::chrono::duration_cast<std::chrono::nanoseconds>(end2 - begin2);
 
-//        printf("Time measured: %.3f seconds.\n", elapsed2.count() * 1e-9);
     } else {
         uniform_real_distribution<> random(-10, 10);
         vector<double> p0 = {
@@ -58,21 +50,12 @@ int main() {
                 random(mt_generator),
         };
         cout << p0[0]<< "|" << p0[1] <<endl;
-//        auto begin = std::chrono::high_resolution_clock::now();
         auto result = simulated_annealing(himmelblau_function, himmelblau_domain, p0, iterations, [](int k) { return 1000.0 / k; }, hop_range);
         cout << "f(" << result << ") = " << himmelblau_function(result) << endl;
-//        auto end = std::chrono::high_resolution_clock::now();
-//        auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
-//
-//        printf("Time measured: %.3f seconds.\n", elapsed.count() * 1e-9);
 
-//        auto begin2 = std::chrono::high_resolution_clock::now();
         auto point = hill_climbing(levy_function, levy_domain, p0, iterations, hop_range);
         cout << "f(" << point << ") = " << levy_function(point) << endl;
-//        auto end2 = std::chrono::high_resolution_clock::now();
-//        auto elapsed2 = std::chrono::duration_cast<std::chrono::nanoseconds>(end2 - begin2);
 
-//        printf("Time measured: %.3f seconds.\n", elapsed2.count() * 1e-9);
     }
 
 }
