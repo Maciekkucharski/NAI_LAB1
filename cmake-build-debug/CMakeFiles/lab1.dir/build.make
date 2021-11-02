@@ -112,11 +112,31 @@ CMakeFiles\lab1.dir\lab2\lab_2.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\lab1.dir\lab2\lab_2.cpp.s /c E:\Uczelnia\NAI\NAI_LAB1\lab2\lab_2.cpp
 <<
 
+CMakeFiles\lab1.dir\lab4\genetic.cpp.obj: CMakeFiles\lab1.dir\flags.make
+CMakeFiles\lab1.dir\lab4\genetic.cpp.obj: ..\lab4\genetic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Uczelnia\NAI\NAI_LAB1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab1.dir/lab4/genetic.cpp.obj"
+	C:\PROGRA~1\MICROS~2\2022\PROFES~1\VC\Tools\MSVC\1430~1.307\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\lab1.dir\lab4\genetic.cpp.obj /FdCMakeFiles\lab1.dir\ /FS -c E:\Uczelnia\NAI\NAI_LAB1\lab4\genetic.cpp
+<<
+
+CMakeFiles\lab1.dir\lab4\genetic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab1.dir/lab4/genetic.cpp.i"
+	C:\PROGRA~1\MICROS~2\2022\PROFES~1\VC\Tools\MSVC\1430~1.307\bin\Hostx86\x86\cl.exe > CMakeFiles\lab1.dir\lab4\genetic.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Uczelnia\NAI\NAI_LAB1\lab4\genetic.cpp
+<<
+
+CMakeFiles\lab1.dir\lab4\genetic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab1.dir/lab4/genetic.cpp.s"
+	C:\PROGRA~1\MICROS~2\2022\PROFES~1\VC\Tools\MSVC\1430~1.307\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\lab1.dir\lab4\genetic.cpp.s /c E:\Uczelnia\NAI\NAI_LAB1\lab4\genetic.cpp
+<<
+
 # Object files for target lab1
 lab1_OBJECTS = \
 "CMakeFiles\lab1.dir\main.cpp.obj" \
 "CMakeFiles\lab1.dir\lab1\lab_1f.cpp.obj" \
-"CMakeFiles\lab1.dir\lab2\lab_2.cpp.obj"
+"CMakeFiles\lab1.dir\lab2\lab_2.cpp.obj" \
+"CMakeFiles\lab1.dir\lab4\genetic.cpp.obj"
 
 # External object files for target lab1
 lab1_EXTERNAL_OBJECTS =
@@ -124,9 +144,10 @@ lab1_EXTERNAL_OBJECTS =
 lab1.exe: CMakeFiles\lab1.dir\main.cpp.obj
 lab1.exe: CMakeFiles\lab1.dir\lab1\lab_1f.cpp.obj
 lab1.exe: CMakeFiles\lab1.dir\lab2\lab_2.cpp.obj
+lab1.exe: CMakeFiles\lab1.dir\lab4\genetic.cpp.obj
 lab1.exe: CMakeFiles\lab1.dir\build.make
 lab1.exe: CMakeFiles\lab1.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Uczelnia\NAI\NAI_LAB1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable lab1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Uczelnia\NAI\NAI_LAB1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable lab1.exe"
 	"D:\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\lab1.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests -- C:\PROGRA~1\MICROS~2\2022\PROFES~1\VC\Tools\MSVC\1430~1.307\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\lab1.dir\objects1.rsp @<<
  /out:lab1.exe /implib:lab1.lib /pdb:E:\Uczelnia\NAI\NAI_LAB1\cmake-build-debug\lab1.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

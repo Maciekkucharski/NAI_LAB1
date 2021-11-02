@@ -5,6 +5,7 @@ CMakeFiles\lab1.dir\lab1\lab_1f.cpp.obj: ..\lab1\lab_1f.cpp
 
 CMakeFiles\lab1.dir\lab2\lab_2.cpp.obj: ..\lab2\lab_2.cpp
 
-CMakeFiles\lab1.dir\main.cpp.obj: ..\lab2\lab_2.hpp
+CMakeFiles\lab1.dir\lab4\genetic.cpp.obj: ..\lab4\genetic.cpp
+
 CMakeFiles\lab1.dir\main.cpp.obj: ..\main.cpp
 

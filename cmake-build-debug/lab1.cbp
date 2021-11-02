@@ -94,6 +94,12 @@
 		<Unit filename="E:/Uczelnia/NAI/NAI_LAB1/lab2/lab_2.hpp">
 			<Option target="lab1"/>
 		</Unit>
+		<Unit filename="E:/Uczelnia/NAI/NAI_LAB1/lab4/genetic.cpp">
+			<Option target="lab1"/>
+		</Unit>
+		<Unit filename="E:/Uczelnia/NAI/NAI_LAB1/lab4/genetic.h">
+			<Option target="lab1"/>
+		</Unit>
 		<Unit filename="E:/Uczelnia/NAI/NAI_LAB1/main.cpp">
 			<Option target="lab1"/>
 		</Unit>

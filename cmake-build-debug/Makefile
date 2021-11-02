@@ -166,6 +166,30 @@ lab2\lab_2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab2\lab_2.cpp.s
 .PHONY : lab2\lab_2.cpp.s
 
+lab4\genetic.obj: lab4\genetic.cpp.obj
+.PHONY : lab4\genetic.obj
+
+# target to build an object file
+lab4\genetic.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab4\genetic.cpp.obj
+.PHONY : lab4\genetic.cpp.obj
+
+lab4\genetic.i: lab4\genetic.cpp.i
+.PHONY : lab4\genetic.i
+
+# target to preprocess a source file
+lab4\genetic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab4\genetic.cpp.i
+.PHONY : lab4\genetic.cpp.i
+
+lab4\genetic.s: lab4\genetic.cpp.s
+.PHONY : lab4\genetic.s
+
+# target to generate assembly for a file
+lab4\genetic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab1.dir\lab4\genetic.cpp.s
+.PHONY : lab4\genetic.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -205,6 +229,9 @@ help:
 	@echo ... lab2/lab_2.obj
 	@echo ... lab2/lab_2.i
 	@echo ... lab2/lab_2.s
+	@echo ... lab4/genetic.obj
+	@echo ... lab4/genetic.i
+	@echo ... lab4/genetic.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

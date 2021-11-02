@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "E:/Uczelnia/NAI/NAI_LAB1/lab1/lab_1f.cpp" "E:/Uczelnia/NAI/NAI_LAB1/cmake-build-debug/CMakeFiles/lab1.dir/lab1/lab_1f.cpp.obj"
   "E:/Uczelnia/NAI/NAI_LAB1/lab2/lab_2.cpp" "E:/Uczelnia/NAI/NAI_LAB1/cmake-build-debug/CMakeFiles/lab1.dir/lab2/lab_2.cpp.obj"
+  "E:/Uczelnia/NAI/NAI_LAB1/lab4/genetic.cpp" "E:/Uczelnia/NAI/NAI_LAB1/cmake-build-debug/CMakeFiles/lab1.dir/lab4/genetic.cpp.obj"
   "E:/Uczelnia/NAI/NAI_LAB1/main.cpp" "E:/Uczelnia/NAI/NAI_LAB1/cmake-build-debug/CMakeFiles/lab1.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")

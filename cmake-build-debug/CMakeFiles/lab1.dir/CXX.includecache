@@ -6,21 +6,13 @@
 
 #IncludeRegexTransform: 
 
-E:/Uczelnia/NAI/NAI_LAB1/lab2/lab_2.hpp
-
 E:/Uczelnia/NAI/NAI_LAB1/main.cpp
-functional
+cmath
 -
 iostream
--
-list
 -
 random
 -
 vector
--
-lab2/lab_2.hpp
-E:/Uczelnia/NAI/NAI_LAB1/lab2/lab_2.hpp
-chrono
 -
 
