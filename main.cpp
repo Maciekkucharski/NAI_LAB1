@@ -6,6 +6,8 @@
 using namespace std;
 
 
+
+
 vector<bool> generate_random_bits(int amount){
     vector<bool> bits = {};
     srand( time(NULL) );
@@ -16,57 +18,70 @@ vector<bool> generate_random_bits(int amount){
     return bits;
 }
 
-pair<unsigned long long int, unsigned long long int> bit_converter_pair(vector<bool> binary_number, int split) {
+pair<double, double> bit_converter_pair(vector<bool> binary_number, int split=64) {
     unsigned long long int sum1 = 0;
     unsigned long long int sum2 = 0;
     for (int i = 0; i < split; ++i) {
         if (binary_number[i] == true)
-            sum1 += pow(2.0, i);
+            sum1 += (unsigned long long int)1<<i;
     }
     for (int i = split; i < binary_number.size(); ++i) {
         if (binary_number[i] == true)
-            sum2 += pow(2.0, i-split);
+            sum2 += (unsigned long long int)1<<(i-split);
     }
-    return {sum1, sum2};
+    double result1 = double(sum1);
+    double result2 = double(sum2);
+    return {result1, result2};
 }
 
 vector<bool> bit_converter_vector (pair<unsigned long long int, unsigned long long int> number_pair){
     vector<bool> binary_number = {};
     unsigned long long int first_number = number_pair.first;
     unsigned long long int second_number = number_pair.second;
-
-    do{
+    for (int i = 0; i < sizeof(first_number)*4 ; ++i) {
         binary_number.push_back(first_number%2);
         first_number/=2;
-    }while(first_number!=0);
-    do{
+    }
+
+    for (int i = 0; i < sizeof(second_number)*4 ; ++i) {
         binary_number.push_back(second_number%2);
         second_number/=2;
-    }while(second_number!=0);
+    }
     return binary_number;
 }
 
-double  fitness_f(pair<int,int> point_one, pair<int,int> point_two){
-    return sqrt((point_two.first-point_one.first)*(point_two.first-point_one.first)+(point_two.second-point_one.second)*(point_two.second-point_one.second));
-}
-//
+//double  fitness_f(pair<int,int> point_one, pair<int,int> point_two){
+//    return sqrt((point_two.first-point_one.first)*(point_two.first-point_one.first)+(point_two.second-point_one.second)*(point_two.second-point_one.second));
+//}
+
+auto himmelblau_function = [](std::vector<double> v) {
+    return pow(pow((pow(v[0], 2) + v[1] - 11), 2) + pow((v[0] + pow(v[0], 2) - 7), 2),-1);
+};
+
 
 int main() {
-//    vector<bool> vec = {false,true,true,true,true};
-    vector<bool> vec = generate_random_bits(128);
-    pair<unsigned long long int, unsigned long long int> pair = bit_converter_pair(vec,64);
-//    cout << bit_converter_pair(vec,64).first<<endl;
-//    cout << bit_converter_pair(vec,64).second<<endl;
+    cout.precision(40);
+//    vector<bool> vec = {false,true,false,true,true,true,true,true};
+    vector<bool> vec = generate_random_bits(64);
+    pair<double, double> pair = bit_converter_pair(vec,32);
+    cout << pair.first<<endl;
+    cout << pair.second<<endl;
     vector<bool> vec2 = bit_converter_vector(pair);
-    for(int i=0;i<vec2.size();i++){
-        cout << vec[i]<< vec2[i] << endl;
+    cout << endl;
+    for(int i=0;i<vec.size();i++){
+        cout << vec[i];
     }
-//    cout << bit_converter_vector({,});
+    cout << endl;
+    for(int i=0;i<vec2.size();i++){
+        cout << vec2[i];
+    }
+    vector<double> converted_pair = {pair.first,pair.second};
+    cout << endl <<   himmelblau_function(converted_pair);
 
 
 }
 
-//
+//zad 2/3
 //random_device rd;
 //mt19937 mt_generator(rd());
 //int input = 0;
