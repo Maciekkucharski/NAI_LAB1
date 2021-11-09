@@ -18,41 +18,48 @@ vector<bool> generate_random_bits(int amount){
     return bits;
 }
 
-pair<double, double> bit_converter_pair(vector<bool> binary_number, int split=64) {
-    unsigned long long int sum1 = 0;
-    unsigned long long int sum2 = 0;
-    for (int i = 0; i < split; ++i) {
-        if (binary_number[i] == true)
-            sum1 += (unsigned long long int)1<<i;
+pair<double, double> bit_converter_pair(vector<bool> binary_number) {
+    long long sum1 = 0;
+    long long sum2 = 0;
+    for (int i = 0; i < 64; i++) {
+        sum1 += (long long)binary_number[i]<<i;
     }
-    for (int i = split; i < binary_number.size(); ++i) {
-        if (binary_number[i] == true)
-            sum2 += (unsigned long long int)1<<(i-split);
+    for (int i = 64; i < 128; i++) {
+        sum2 += (long long)binary_number[i]<<(i-64);
     }
-    double result1 = double(sum1);
-    double result2 = double(sum2);
+    cout << sum1 << "       " << sum2;
+    double result1= 5.0 * (sum1 / pow(2, 63));
+    double result2= 5.0 * (sum2 / pow(2, 63));
     return {result1, result2};
 }
 
-vector<bool> bit_converter_vector (pair<unsigned long long int, unsigned long long int> number_pair){
-    vector<bool> binary_number = {};
-    unsigned long long int first_number = number_pair.first;
-    unsigned long long int second_number = number_pair.second;
-    for (int i = 0; i < sizeof(first_number)*4 ; ++i) {
-        binary_number.push_back(first_number%2);
-        first_number/=2;
+vector<bool> bit_converter_vector(pair<double, double> number_pair){
+    vector<bool> binary_number (128,0);
+    double first_number = number_pair.first;
+    double second_number = number_pair.second;
+    long long x = (long long)((first_number * pow(2, 63)) / 5.0);
+    long long y = (long long)((second_number * pow(2, 63)) / 5.0);
+    cout << x << "      " << y;
+    long long temp_x, temp_y;
+    for (int i = 63; i >=0 ; i--) {
+//        binary_number.push_back(x%2);
+//        x/=2;
+        temp_x = (x&1);
+        x = x >> 1;
+        binary_number[i] = temp_x;
+        temp_y = (y&1);
+        y = y >> 1;
+        binary_number[i+64] = temp_y;
     }
 
-    for (int i = 0; i < sizeof(second_number)*4 ; ++i) {
-        binary_number.push_back(second_number%2);
-        second_number/=2;
-    }
+
+//    for (int i = 0; i < 64 ; i++) {
+//        binary_number.push_back(y%2);
+//        y/=2;
+//    }
     return binary_number;
 }
 
-//double  fitness_f(pair<int,int> point_one, pair<int,int> point_two){
-//    return sqrt((point_two.first-point_one.first)*(point_two.first-point_one.first)+(point_two.second-point_one.second)*(point_two.second-point_one.second));
-//}
 
 auto himmelblau_function = [](std::vector<double> v) {
     return pow(pow((pow(v[0], 2) + v[1] - 11), 2) + pow((v[0] + pow(v[0], 2) - 7), 2),-1);
@@ -60,23 +67,33 @@ auto himmelblau_function = [](std::vector<double> v) {
 
 
 int main() {
-    cout.precision(40);
+    cout.precision(16);
+    pair<double, double> test_pair = {-3.0, -2.123456789012345};
+//    vector<bool> test = bit_converter_vector(test_pair);
+//    pair<double, double> test_result = bit_converter_pair(test);
+    pair<double, double> result = bit_converter_pair(bit_converter_vector(test_pair));
+    cout << result.first << " <- num 1" << endl;
+    cout << result.second<< " <- num 2" << endl;;
+
+
+
+
 //    vector<bool> vec = {false,true,false,true,true,true,true,true};
-    vector<bool> vec = generate_random_bits(64);
-    pair<double, double> pair = bit_converter_pair(vec,32);
-    cout << pair.first<<endl;
-    cout << pair.second<<endl;
-    vector<bool> vec2 = bit_converter_vector(pair);
-    cout << endl;
-    for(int i=0;i<vec.size();i++){
-        cout << vec[i];
-    }
-    cout << endl;
-    for(int i=0;i<vec2.size();i++){
-        cout << vec2[i];
-    }
-    vector<double> converted_pair = {pair.first,pair.second};
-    cout << endl <<   himmelblau_function(converted_pair);
+//    vector<bool> vec = generate_random_bits(128);
+//    pair<double, double> pair = bit_converter_pair(vec);
+//    cout << pair.first<<endl;
+//    cout << pair.second<<endl;
+//    vector<bool> vec2 = bit_converter_vector(pair);
+//    cout << endl;
+//    for(int i=0;i<vec.size();i++){
+//        cout << vec[i];
+//    }
+//    cout << endl;
+//    for(int i=0;i<vec2.size();i++){
+//        cout << vec2[i];
+//    }
+//    vector<double> converted_pair = {pair.first,pair.second};
+//    cout << endl <<   himmelblau_function(converted_pair);
 
 
 }
